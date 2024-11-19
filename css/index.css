@@ -146,16 +146,16 @@ main{
 
     
   .vote-button{
-    padding:6px;
+    padding:8px;
     width: 160px;
     border-radius: 10px;
     border: none;
     background-color:var(--secondary);
     color:var(--primary);
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing: 1;
     align-self: self-end;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-weight: 700;
   }
 
@@ -446,19 +446,15 @@ main{
 @media only screen and (max-width: 640px){
 
     body{
-        /* background-color: #2984eb; */
-         height: auto;
-         
+        /* background-color: #2984eb; */         
     }
 
     .container{
-        flex-direction: column;
-        height: 800px;
-       
+        flex-direction: column;       
     }
 
     .col-right{
-      flex:3;
+      flex:1;
     }
     
     .topic-1{
