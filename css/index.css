@@ -14,6 +14,7 @@
     --one-hover:#84adc7e1;
     --two:#233F6E;
     --two-hover:#233e6eee;
+    --font-hover:#212121ab;
 }
 
 body{
@@ -54,6 +55,10 @@ nav{
 .nav-bar li a {
     text-decoration: none;
     color:var(--primary);
+  }
+
+  .nav-bar li a:hover{
+    color: var(--font-hover);
   }
 
 .logo {
