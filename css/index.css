@@ -8,12 +8,12 @@
 }
 
 :root{
-    --primary-color:#212121;
-    --secondary-color:#d9dade;
-    --accent-color:#9BED0A;
-    --purple-color:#BD82FF;
-    --red-color:#EB293B;
-    --grey-color:#8E8E8E;
+    --primary:#000000;
+    --secondary:#FFFFFF;
+    --one:#84ADC7;
+    --one-hover:#84adc7e1;
+    --two:#233F6E;
+    --two-hover:#233e6eee;
 }
 
 body{
@@ -28,6 +28,7 @@ header{
 
 nav{
     width: 78vw;
+    height: 70px;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -43,22 +44,21 @@ nav{
 .nav-bar{
     display: flex;
     position: relative;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
     font-size: 18px; 
     font-weight: 500;
+    margin-left: 10px;
 }
 
 .nav-bar li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color:var(--primary);
   }
 
 .logo {
-    font-size: 62px;
-    font-weight: bold;
+  display: none;
 }
-
 
 .right-nav{
     display: flex;
@@ -70,14 +70,19 @@ nav{
   width: 90px;
   border-radius: 5px;
   border: none;
-  background-color:var(--secondary-color);
-  margin-right: 5px;
-  font-size: 17px;   
+  background-color:var(--secondary);
+  color:var(--primary);
+  margin-right: 5px; 
+  font-size: 17px; 
+  font-weight: 500; 
+  border: 1.8px var(--secondary) solid; 
 }
 
 .login-btn:hover{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color:var(--primary);
+    border: 1.5px var(--primary) solid; 
+    color: var(--secondary);
+    
 }
 
 .signup-btn {
@@ -85,13 +90,17 @@ nav{
   width: 90px;
   border-radius: 5px;
   border: none;
-  background-color: var(--accent-color);
-  font-size: 17px;  
+  background-color:var(--secondary);
+  color:var(--primary);
+  font-size: 17px; 
+  font-weight: 500; 
+  border: 1.8px var(--primary) solid; 
+
 }
 
 .signup-btn:hover{
-    background-color:var(--primary-color);
-    color:var(--secondary-color);
+    background-color:var(--primary);
+    color:var(--secondary);
 }
 
 
@@ -108,6 +117,16 @@ main{
     display: flex;
     gap:10px;
   }
+
+  .col-right,
+  .row1 {
+    background-image: url(../images/spider.png); /* Use the same image */
+    border-radius: 20px;
+    background-size: cover; /* Ensure the image scales to fill the div */
+    background-position: center top; /* Align image at the center */
+    background-attachment: fixed; /* Makes the background static like a window */
+    
+  }
   
   .col-left{
     flex:3;
@@ -120,9 +139,6 @@ main{
   .col-right{
     flex:2;
     border-radius:20px;
-    /* background-image:url(../images/34.png); */
-    background-size: 100% 100%;
-    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,17 +146,23 @@ main{
 
     
   .vote-button{
-    padding:5px;
+    padding:6px;
     width: 160px;
     border-radius: 10px;
     border: none;
-    background-color:var(--red-color);
-    color: #FFFF;
+    background-color:var(--secondary);
+    color:var(--primary);
     font-size: 18px;
     letter-spacing: 1;
     align-self: self-end;
     margin-bottom: 30px;
-    font-weight: 500;
+    font-weight: 700;
+  }
+
+  .vote-button:hover{
+    background-color:var(--primary);
+    color:var(--secondary);
+  
   }
   
   .row{
@@ -150,8 +172,7 @@ main{
   
   .row1{
     flex:4;
-    background-color: var(--primary-color);
-    color:white;
+    color:var(--secondary);
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -165,7 +186,6 @@ main{
   .topic-5{
     font-size: 20px;
     letter-spacing: 1;
-    color:var(--grey-color)
   }
 
   .topic-1{
@@ -174,9 +194,6 @@ main{
     margin-bottom: 10px;
   }
 
-  .zen-font{
-    color:var(--purple-color)
-  }
 
   .topic-4{
     font-size: 22px;
@@ -196,21 +213,27 @@ main{
   
   .col1{
     flex:1;
-    background-color: var(--purple-color);
+    background-color: var(--one);
     display: flex;
     flex-direction: column;
+    color: var(--secondary);
   }
+
+  .col1:hover{
+    background-color: var(--one-hover);
+  }
+
 
   .topic-6{
     align-items: left;
-    font-size: 31px;
+    font-size: 28px;
     font-weight: 500;
-    color: #FFFF;
     letter-spacing: 1;
     padding-left: 30px;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
   }
 
   .arrow{
@@ -222,6 +245,7 @@ main{
     align-self: flex-end;
     margin-top: 10px;
     margin-right: 10px;
+    
   }
 
   .arrow img{
@@ -231,13 +255,14 @@ main{
 
   .col2{
     flex:1;
-    background-color: var(--grey-color);
     display: flex;
     flex-direction: column;
+    background-color: var(--two);
+    color: var(--secondary);
   }
 
-  .col2 p{
-    margin-top: 40px;
+  .col2:hover{
+    background-color: var(--two-hover);
   }
 
 
@@ -311,16 +336,21 @@ main{
 
     .topic-6{
         font-size: 29px;
+        margin-top: 0px;
     }
 
-    .col2 p{
-        margin-top: 0px;
-      }
 
 }
 
 
 @media only screen and (max-width: 768px){ 
+
+  .logo{
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 8px;
+  }
 
     body{
         /* background-color: #29eb29; */
@@ -341,18 +371,20 @@ main{
     .nav-bar {
         flex-direction: column;
         position: absolute;
-        top:13%;
-        left: 7%;
-        background-color: white;
-        width: 86vw;
+        top:12%;
+        left: 4%;
+        background-color:var(--secondary);
+        width: 88vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         opacity: 0;
+
     }
 
     .nav-bar li{
-        margin:8px;
+      margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .show{
@@ -374,7 +406,7 @@ main{
         width: 100%;
         height: 3px;
         border-radius: 3px;
-        background-color: var(--primary-color);
+        background-color: var(--primary);
         opacity: 1;
         transition: 0.3s;
         
@@ -415,31 +447,26 @@ main{
 
     body{
         /* background-color: #2984eb; */
+         height: auto;
+         
     }
 
     .container{
         flex-direction: column;
-        /* height: auto; */
+        height: 800px;
+       
     }
 
     .col-right{
-        flex: 1;  
+      flex:3;
     }
-
-    /* .row1{
-        gap:7px;
-    }
-
-    .topic-5{
-        font-size: 16px;
-      } */
     
     .topic-1{
         font-size: 40px;
     }
     
-    /* .topic-4{
-        font-size: 17px;
+     .topic-4{
+        font-size: 18px;
       }
 
     .arrow{
@@ -451,13 +478,6 @@ main{
         width: 16px;
         height: 16px;
     }
-
-    .topic-6{
-        flex-direction: row;
-        gap: 5px;
-        font-size: 18px;
-    } */
-
 
 }
 

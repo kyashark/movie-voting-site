@@ -11,7 +11,7 @@
         <div class="side-nav">
             <div class="logo">Z</div>
             <ul class="nav-bar" id="nav-bar">
-                <li><a href="#">Categories</a></li>
+                <li><a href="#">Movies</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">FAQ</a></li>
             </ul>
@@ -31,6 +31,7 @@
    
     <!-- bento grid -->
 <main>
+ 
     <div class="container">
       <div class="col-left">
           <div class="row row1">
@@ -44,9 +45,9 @@
               <div class="arrow">
                 <img src="../images/arrow.png">
               </div>
-              <p class=topic-6>
-                <span class="line-1">Top Voted</span> 
-                <span class="line-2">Movies</span>
+              <p class=topic-6>Top Voted Movies
+                <!-- <span class="line-1">Top Voted</span>  -->
+                <!-- <span class="line-2">Movies</span> -->
               </p>
             </div>
             <div class="row-col col2">
