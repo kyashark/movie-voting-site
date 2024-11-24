@@ -90,7 +90,7 @@ nav{
     
 }
 
-.signup-btn {
+.register-btn{
   padding: 5px;
   width: 90px;
   border-radius: 5px;
@@ -103,11 +103,26 @@ nav{
 
 }
 
-.signup-btn:hover{
+.register-btn:hover{
     background-color:var(--primary);
     color:var(--secondary);
 }
 
+.username-text{
+  padding: 5px;
+  width: 90px;
+  font-size: 17px; 
+  font-weight: 500; 
+}
+
+.username-text a{
+  text-decoration: none;
+  color:var(--primary);
+}
+
+.username-text a:hover{
+  color: var(--font-hover);
+}
 
 main{
     display: flex;
