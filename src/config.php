@@ -10,6 +10,6 @@
         die("Connection Error");
     }
     else{
-        echo 'Successfuly connected';
+        // echo 'Successfuly connected';
     }
 ?>
