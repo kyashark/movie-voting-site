@@ -1,23 +1,7 @@
-<?php
-
-include "../config.php";
-
-session_start(); // Check if the user is logged in
-
-if(!isset($_SESSION['username'])){
-    header("location: login.php");
-    exit;
-}
-
-$username = htmlspecialchars($_SESSION['username']);
-
-
-?>
-
 <html>
   <head>
     <title>Zenith</title>
-    <link rel="stylesheet" href="../../css/index.css" />
+    <link rel="stylesheet" href="<?= BASE_URL ?>/css/index.css" />
   </head>
   <body>
 
@@ -33,16 +17,8 @@ $username = htmlspecialchars($_SESSION['username']);
             </ul>
         </div>
         <div class="right-nav">
-            <!-- <button class="login-btn">Login</button> -->
-           <span class="username-text"> 
-                <a href="#">
-                    <?php echo $username ?>
-                </a>
-            </span>
-            <form method="POST" action="../auth/logout.php">
-              <button class="register-btn" type="submit">Logout</button>
-            </form>
-            
+            <a href="<?= BASE_URL ?>/Auth/login"><button class="login-btn">Login</button></a>
+            <a href="<?= BASE_URL ?>/Auth/Register"><button class="register-btn">Register</button></a>
             <div class="menu-item" id="menu-item">
                 <span></span>
                 <span></span>
@@ -67,7 +43,7 @@ $username = htmlspecialchars($_SESSION['username']);
           <div class="row row2">
             <div class="row-col col1">
               <div class="arrow">
-                <img src="../../images/arrow.png">
+                <img src="../images/arrow.png">
               </div>
               <p class=topic-6>Top Voted Movies
                 <!-- <span class="line-1">Top Voted</span>  -->
@@ -76,7 +52,7 @@ $username = htmlspecialchars($_SESSION['username']);
             </div>
             <div class="row-col col2">
             <div class="arrow">
-                <img src="../../images/arrow.png">
+                <img src="../images/arrow.png">
               </div>
               <p class=topic-6>New Release</p>
             </div>
@@ -87,6 +63,6 @@ $username = htmlspecialchars($_SESSION['username']);
      </div>
     </div>
   </main>
-    <script src="../../js/index.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>

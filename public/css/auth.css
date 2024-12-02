@@ -36,13 +36,13 @@ body{
     /* background-color:#FFFFFF; */
     border-radius: 8px;
     width: 400px;
-    height: 450px;
-    padding: 30px;
+    height: 500px;
+    padding:30px;
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 form label {
@@ -50,7 +50,7 @@ form label {
     /* margin-bottom: 5px; */
     text-align: left;
     align-self: flex-start;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 form input {
@@ -66,7 +66,7 @@ form span{
     text-align: left;
     height: 20px;
     font-size: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #df0303dc;
 }
 
@@ -92,7 +92,7 @@ form p{
     /* text-align: left; */
     height: 20px;
     font-size: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #df0303dc;
 
 }
