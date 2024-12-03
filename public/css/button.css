@@ -1,0 +1,45 @@
+.btn{
+  padding:5px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1.8px var(--primary-color) solid;
+  
+}
+
+.btn:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1.8px var(--primary-color) solid;
+}
+
+.vote{
+  width: 160px;
+  letter-spacing: 1;
+  align-self: self-end;
+  margin-bottom: 40px;
+  font-weight: 700;
+  border: 1.8px var(--secondary-color) solid;
+}
+
+
+.login{
+  width: 90px;
+  margin-right: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1.8px var(--secondary-color) solid;
+}
+
+
+.register{
+  width: 90px;
+}
+
+.logout{
+  width: 90px;
+}
+
