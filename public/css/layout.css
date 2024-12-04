@@ -13,7 +13,6 @@
 }
 
 .form-container{
-    /* background-color:#FFFFFF; */
     border-radius: 8px;
     width: 400px;
     height: 500px;
@@ -26,11 +25,13 @@
     height: 500px;
     display: flex;
     gap: 10px;
-    /* background-color: pink; */
 }
 
-
-
+.movie-container{
+  width: 78vw;
+  height: auto;
+  /* background-color: coral; */
+}
 
 
 /* 2xl */
@@ -39,14 +40,16 @@
 
 /* xl */
 @media only screen and (max-width: 1280px) {
-  .home-container {
+  .home-container,
+  .movie-container {
     width: 83vw;
   }
 }
 
 /* lg */
 @media only screen and (max-width: 1024px) {
-  .home-container {
+  .home-container,
+  .movie-container{
     width: 85vw;
   }
 
@@ -59,6 +62,10 @@
 @media only screen and (max-width: 640px) {
   .home-container {
     flex-direction: column;
+  }
+
+  .filter-tab{
+    display: none;
   }
 
 }

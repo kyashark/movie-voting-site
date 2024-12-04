@@ -69,16 +69,7 @@ nav {
   }
 
   .nav-bar {
-    flex-direction: column;
-    position: absolute;
-    top: 12%;
-    left: 4%;
-    background-color: var(--secondray-color);
-    width: 88vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
+    display: none;
   }
 
   .nav-bar li {
@@ -87,7 +78,16 @@ nav {
   }
 
   .show {
-    opacity: 1;
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 12%;
+    left: 4%;
+    background-color: var(--secondary-color);
+    width: 88vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu-item {
