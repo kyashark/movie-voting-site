@@ -75,8 +75,8 @@
             </div>
 
             <div class="movie-grid">
-
-                <!-- <div class="card" style="background-image: url('<?=BASE_URL ?>/images/demo.jpeg');" id="card">
+<!-- 
+                <div class="card" style="background-image: url('<?=BASE_URL ?>/images/ponyo.jpeg');" id="card">
                     <div class="card-label" id="card-label">
                         <span>Ponyo</span>
                         <div class="movie-tab">

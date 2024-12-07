@@ -15,8 +15,8 @@
         <div class="logo">Z</div>
         <ul class="nav-bar" id="nav-bar">
           <li><a href="<?= BASE_URL ?>/User/home">Home</a></li>
-          <li><a href="<?= BASE_URL ?>/Movie/movie">Movies</a></li>
-          <li><a href="#">Series</a></li>
+          <li><a href="<?= BASE_URL ?>/Movie">Movies</a></li>
+          <li><a href="<?= BASE_URL ?>/Series">Series</a></li>
         </ul>
       </div>
       <div class="right-nav">
