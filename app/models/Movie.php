@@ -7,12 +7,49 @@ class Movie{
         $this->db = Database::connect();
     }
 
-    // Get Movies by movie type
-    public function getAllMoviesByType($type){
-        $stmt = $this->db->prepare("SELECT * FROM movies WHERE type =?");
-        $stmt->execute([$type]);
-        $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $movies;
+
+    public function getMovies($sort = 'random', $genres = []) {
+        $query = "SELECT m.movie_name, m.release_date, m.movie_votes, m.image 
+                FROM movies m 
+                LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
+                LEFT JOIN genres g ON mg.genre_id = g.genre_id
+                WHERE m.type = 'movie'";
+        
+        $conditions = [];
+        $params = [];
+
+        // genres
+        if (!empty($genres)) {
+            $placeholders = implode(',', array_fill(0, count($genres), '?'));
+            $conditions[] = "g.genre_name IN ($placeholders)";
+            $params = array_merge($params, $genres);
+        }
+
+        
+        if (!empty($conditions)) {
+            $query .= ' AND ' . implode(' AND ', $conditions);
+        }
+
+
+        // sorting condition
+        switch ($sort) {
+            case 'top':
+                $query .= " ORDER BY m.movie_votes DESC";
+                break;
+            case 'new':
+                $query .= " ORDER BY m.release_date DESC";
+                break;
+            case 'alpha':
+                $query .= " ORDER BY m.movie_name ASC";
+                break;
+            default:
+                $query .= " ORDER BY RAND()";
+        }
+
+        $stmt = $this->db->prepare($query);
+        $stmt->execute($params);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 

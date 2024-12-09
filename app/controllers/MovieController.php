@@ -13,9 +13,17 @@ class MovieController extends Controller{
         $username = Session::get('username');
  
         $this->movieModel = $this->model('Movie');
-        $movies = $this->movieModel->getAllMoviesByType('movie');
+ 
+        $this->view('user/movie', ['username' => $username]);
+    }
 
-        $this->view('user/movie', ['username' => $username, 'movies' => $movies]);
+    public function filtereMovies() {
+                $sort = isset($_GET['sort']) ? $_GET['sort'] : 'random';
+                $genres = isset($_GET['genres']) ? explode(',', $_GET['genres']) : [];
+        
+                $movies = $this->movieModel->getMovies($sort, $genres);
+                
+                echo json_encode($movies);
     }
 
     

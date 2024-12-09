@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -48,9 +48,9 @@
 
             <div class="filter-container">
                 <div class="filter-tab">
-                    <button class="filter btn">Top Voted</button>
-                    <button class="filter btn">New Realease</button>
-                    <button class="filter btn">Alphabetical</button>
+                    <button class="filter btn" data-sort="top">Top Voted</button>
+                    <button class="filter btn" data-sort="new">New Realease</button>
+                    <button class="filter btn" data-sort="alpha">Alphabetical</button>
                 </div>
 
                 <select name="filters" id="filters">
@@ -63,18 +63,18 @@
             </div>
 
             <div class="genre-container">
-                <button class="gener">Action</button>
-                <button class="gener">Adventure</button>
-                <button class="gener">Comedy</button>
-                <button class="gener">Drama</button>
-                <button class="gener">Horror</button>
-                <button class="gener">Sci-Fi</button>
-                <button class="gener">Thriller</button>
-                <button class="gener">Romance</button>
-                <button class="gener">Fantasy</button>
+                <button class="genre" data-genre="action">Action</button>
+                <button class="genre" data-genre="adventure">Adventure</button>
+                <button class="genre" data-genre="comedy">Comedy</button>
+                <button class="genre" data-genre="drama">Drama</button>
+                <button class="genre" data-genre="horror">Horror</button>
+                <button class="genre" data-genre="sci-fi">Sci-Fi</button>
+                <button class="genre" data-genre="thriller">Thriller</button>
+                <button class="genre" data-genre="romance">Romance</button>
+                <button class="genre" data-genre="fantasy">Fantasy</button>
             </div>
 
-            <div class="movie-grid">
+            <div class="movie-grid" id="movie-grid">
 
                 <!-- <div class="card" style="background-image: url('<?=BASE_URL ?>/images/demo.jpeg');" id="card">
                     <div class="card-label" id="card-label">
@@ -88,23 +88,6 @@
                         </div>
                     </div>
                 </div> -->
-
-
-                <?php foreach($movies as $movie): ?>
-                <div class="card" style="background-image: url('<?=BASE_URL ?>/images/<?= $movie['image']; ?>');" id="card">
-                    <div class="card-label" id="card-label">
-                        <span><?= htmlspecialchars($movie['movie_name']);?></span>
-                        <div class="movie-tab">
-                            <span class="year"><?= date('Y', strtotime($movie['release_date'])); ?></span>
-                            <div class=vote-tab>
-                                <span class="vote-count"><?= htmlspecialchars($movie['movie_votes']); ?></span>
-                                <span class="material-symbols-outlined" id="heart">&#xe87d;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach;?>
-
             </div>
         </div>
     </main>
