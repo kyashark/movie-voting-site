@@ -13,7 +13,8 @@ class Movie{
                 FROM movies m 
                 LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
                 LEFT JOIN genres g ON mg.genre_id = g.genre_id
-                WHERE m.type =:type";
+                WHERE m.type =:type
+                GROUP BY m.id";
         
         $conditions = [];
         $params = [':type' => $type];

@@ -8,9 +8,9 @@
 
 .genre-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: left;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   gap: 10px;
   overflow-x: auto; /* Enable horizontal scrolling */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
@@ -18,14 +18,17 @@
 }
 
 .movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  display: flex;
+  float: left;
+  flex-wrap:wrap;
+  justify-content: space-evenly; 
   gap: 20px;
 }
 
 .card{
-  width: 170px;
-  height: 240px;
+  margin-bottom: 15px;
+  width: 180px;
+  height: 250px;
   background-color: rgb(233, 233, 245);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
@@ -87,7 +90,10 @@
 }
 
 .no-movies-found{
-  text-align:center;
+  display: flex;
   margin-top: 50px;
   font-size: 1.2rem;
+
 }
+
+
