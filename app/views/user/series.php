@@ -17,9 +17,9 @@
             <div class="side-nav">
                 <div class="logo">Z</div>
                 <ul class="nav-bar" id="nav-bar">
-                <li><a href="<?= BASE_URL ?>/User/home">Home</a></li>
-          <li><a href="<?= BASE_URL ?>/Movie">Movies</a></li>
-          <li><a href="<?= BASE_URL ?>/Series">Series</a></li>
+                    <li><a href="<?= BASE_URL ?>/User/home">Home</a></li>
+                    <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=movie&sort=random">Movies</a></li>
+                    <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=series&sort=random">Series</a></li>
                 </ul>
             </div>
             <div class="right-nav">
@@ -75,35 +75,6 @@
             </div>
 
             <div class="movie-grid">
-<!-- 
-                <div class="card" style="background-image: url('<?=BASE_URL ?>/images/ponyo.jpeg');" id="card">
-                    <div class="card-label" id="card-label">
-                        <span>Ponyo</span>
-                        <div class="movie-tab">
-                            <span class="year">2018</span>
-                            <div class=vote-tab>
-                                <span class="vote-count">200</span>
-                                <span class="material-symbols-outlined">&#xe87d;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <?php foreach($movies as $movie): ?>
-                <div class="card" style="background-image: url('<?=BASE_URL ?>/images/<?= $movie['image']; ?>');" id="card">
-                    <div class="card-label" id="card-label">
-                        <span><?= htmlspecialchars($movie['movie_name']);?></span>
-                        <div class="movie-tab">
-                            <span class="year"><?= date('Y', strtotime($movie['release_date'])); ?></span>
-                            <div class=vote-tab>
-                                <span class="vote-count"><?= htmlspecialchars($movie['movie_votes']); ?></span>
-                                <span class="material-symbols-outlined" id="heart">&#xe87d;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach;?>
 
             </div>
         </div>

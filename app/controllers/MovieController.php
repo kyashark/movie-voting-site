@@ -17,13 +17,13 @@ class MovieController extends Controller{
 
     public function filtereMovies() {
         // .....
-        // $type = isset($_GET['type']);
+        $type = isset($_GET['type']) ? $_GET['type']:'';
 
         $sort = isset($_GET['sort']) ? $_GET['sort'] : 'random';
         $genres = isset($_GET['genres']) ? explode(',', $_GET['genres']) : [];
         
         // .....
-        $movies = $this->movieModel->getMovies($sort, $genres);
+        $movies = $this->movieModel->getMovies($type,$sort, $genres);
     
         if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
             

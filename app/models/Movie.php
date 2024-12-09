@@ -8,35 +8,27 @@ class Movie{
     }
 
 
-    public function getMovies($sort = 'random', $genres = []) {
+    public function getMovies($type,$sort = 'random', $genres = []) {
         $query = "SELECT m.movie_name, m.release_date, m.movie_votes, m.image 
                 FROM movies m 
                 LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
                 LEFT JOIN genres g ON mg.genre_id = g.genre_id
-                WHERE m.type ='movie'";
+                WHERE m.type =:type";
         
         $conditions = [];
-        $params = [];
-        // $params = [':type' => $type];
+        $params = [':type' => $type];
 
-        // genres
+        // Check for genres and use named placeholders
         if (!empty($genres)) {
-            $placeholders = implode(',', array_fill(0, count($genres), '?'));
-            $conditions[] = "g.genre_name IN ($placeholders)";
-            $params = array_merge($params, $genres);
+        // Create named placeholders like :genre1, :genre2, ...
+        $placeholders = [];
+        foreach ($genres as $index => $genre) {
+            $placeholders[] = ":genre" . $index;
+            $params[":genre" . $index] = $genre; // Bind each genre to a named placeholder
         }
-
-            // Check for genres and use named placeholders
-    // if (!empty($genres)) {
-    //     // Create named placeholders like :genre1, :genre2, ...
-    //     $placeholders = [];
-    //     foreach ($genres as $index => $genre) {
-    //         $placeholders[] = ":genre" . $index;
-    //         $params[":genre" . $index] = $genre; // Bind each genre to a named placeholder
-    //     }
-    //     // Add condition for genre filter
-    //     $conditions[] = "g.genre_name IN (" . implode(",", $placeholders) . ")";
-    // }
+        // Add condition for genre filter
+        $conditions[] = "g.genre_name IN (" . implode(",", $placeholders) . ")";
+    }
 
         
         if (!empty($conditions)) {
@@ -65,5 +57,14 @@ class Movie{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-
 }
+
+/*
+SELECT m.movie_name, m.release_date, m.movie_votes, m.image 
+FROM movies m 
+LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
+LEFT JOIN genres g ON mg.genre_id = g.genre_id
+WHERE m.type = 'movie' 
+AND g.genre_name IN (:genre0, :genre1)
+ORDER BY m.release_date DESC
+*/

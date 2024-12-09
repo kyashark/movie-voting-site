@@ -13,30 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const genreButtons = document.querySelectorAll(".genre");
   const movieGrid = document.querySelector("#movie-grid");
   
-  
-  function updateMovies() {
-    const activeSort = document.querySelector(".filter.active");
-    const sort = activeSort ? activeSort.dataset.sort : "random";
-  
+
+function updateMovies() {
+    const sort = document.querySelector(".filter.active")?.dataset.sort || "random";
     const activeGenres = [...document.querySelectorAll(".genre.active")]
       .map(button => button.dataset.genre);
-
-    // ......
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const type = urlParams.get('type');
   
-    let newUrl = `${window.location.origin}${window.location.pathname}`;
+    const urlParams = new URLSearchParams(window.location.search);
+    const type = urlParams.get('type') || 'defaultType'; // Default type if not present
   
-//....... Add the type parameter if it's not already in the URL
-//   newUrl += `?type=${type}`;
-
-
-    newUrl += `?sort=${sort}`;
-  
-    if (activeGenres.length) {
-      newUrl += `&genres=${activeGenres.join(",")}`;
-    }
-  
+    let newUrl = `${window.location.origin}${window.location.pathname}?type=${type}&sort=${sort}`;
+    
+    if (activeGenres.length) newUrl += `&genres=${activeGenres.join(",")}`;
+    
     history.pushState(null, "", newUrl);
     fetchMovies();
   }
