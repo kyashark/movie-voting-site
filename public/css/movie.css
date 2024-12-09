@@ -1,0 +1,99 @@
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.genre-container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-bottom: 40px;
+  gap: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.movie-grid {
+  display: flex;
+  float: left;
+  flex-wrap:wrap;
+  justify-content: space-evenly; 
+  gap: 20px;
+}
+
+.card{
+  margin-bottom: 15px;
+  width: 180px;
+  height: 250px;
+  background-color: rgb(233, 233, 245);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  background-size: cover; /* Ensure the image scales to fill the div */
+}
+
+.card:hover{
+  filter: brightness(0.9);
+}
+
+
+.card-label{
+  flex-direction: column;
+  align-self: flex-end; 
+  width: 150px;
+  min-height: 60px;
+  height: auto;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  opacity: 0.9;
+  gap: 3px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+}
+
+
+.movie-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--font-hover);
+}
+
+.movie-tab .year {
+  font-size: 0.9rem;
+}
+
+.vote-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.vote-tab .vote-count {
+  font-size: 0.8rem;
+}
+
+.vote-tab span {
+  font-size: 1.2rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 0;
+  color: #ff8787;
+  cursor: pointer;
+}
+
+.no-movies-found{
+  display: flex;
+  margin-top: 50px;
+  font-size: 1.2rem;
+
+}
+
+

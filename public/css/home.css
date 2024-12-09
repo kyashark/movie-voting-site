@@ -1,0 +1,143 @@
+:root {
+  --one: #84adc7;
+  --one-hover: #84adc7e1;
+  --two: #233f6e;
+  --two-hover: #233e6eee;
+  --font-hover: #212121ab;
+}
+
+.col-right,
+.row1 {
+  background-image: url(../images/spider.png); /* Use the same image */
+  border-radius: 20px;
+  background-size: cover; /* Ensure the image scales to fill the div */
+  background-position: center top; /* Align image at the center */
+  background-attachment: fixed; /* Makes the background static like a window */
+}
+
+.col-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col-right {
+  flex: 2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.row1 {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 20px;
+  align-items: left;
+  justify-content: center;
+}
+
+.row2 {
+  flex: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.row-col {
+  border-radius: 20px;
+}
+
+.col1 {
+  flex: 1;
+  background-color: var(--one);
+  display: flex;
+  flex-direction: column;
+}
+
+.col1:hover {
+  background-color: var(--one-hover);
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+.col2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--two);
+}
+
+.col2:hover {
+  background-color: var(--two-hover);
+}
+
+/* Responsive */
+
+/* 2xl */
+@media only screen and (max-width: 1536px) {
+}
+
+/* xl */
+@media only screen and (max-width: 1280px) {
+}
+
+/* lg */
+@media only screen and (max-width: 1024px) {
+  .row1 {
+    gap: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .arrow img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .col-right {
+    flex: 1;
+  }
+
+  .arrow {
+    width: 22px;
+    height: 22px;
+  }
+
+  .arrow img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+}

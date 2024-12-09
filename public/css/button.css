@@ -1,0 +1,121 @@
+.btn {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1.8px var(--primary-color) solid;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1.8px var(--primary-color) solid;
+}
+
+
+
+
+.login {
+  width: 90px;
+  margin-right: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1.8px var(--secondary-color) solid;
+}
+
+.register {
+  width: 90px;
+}
+
+.logout {
+  width: 90px;
+}
+
+.vote {
+  width: 160px;
+  letter-spacing: 1;
+  align-self: self-end;
+  margin-bottom: 40px;
+  font-weight: 700;
+  border: 1.8px var(--secondary-color) solid;
+}
+
+.search-input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter {
+  width: 160px;
+  margin-right: 8px;
+}
+
+.filter.active{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1.8px var(--primary-color) solid;
+}
+
+.genre {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #cccccca4;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.genre.active{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.genre:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+select {
+  display: none;
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border: 1.8px var(--primary-color) solid;
+}
+
+@media only screen and (max-width: 1024px) {
+  .filter {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .filter {
+    font-size: 16px;
+  }
+  .search-input {
+    width: 150px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  select {
+    display: block;
+  }
+}
