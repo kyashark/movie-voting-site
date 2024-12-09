@@ -13,10 +13,11 @@ class Movie{
                 FROM movies m 
                 LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
                 LEFT JOIN genres g ON mg.genre_id = g.genre_id
-                WHERE m.type = 'movie'";
+                WHERE m.type ='movie'";
         
         $conditions = [];
         $params = [];
+        // $params = [':type' => $type];
 
         // genres
         if (!empty($genres)) {
@@ -24,6 +25,18 @@ class Movie{
             $conditions[] = "g.genre_name IN ($placeholders)";
             $params = array_merge($params, $genres);
         }
+
+            // Check for genres and use named placeholders
+    // if (!empty($genres)) {
+    //     // Create named placeholders like :genre1, :genre2, ...
+    //     $placeholders = [];
+    //     foreach ($genres as $index => $genre) {
+    //         $placeholders[] = ":genre" . $index;
+    //         $params[":genre" . $index] = $genre; // Bind each genre to a named placeholder
+    //     }
+    //     // Add condition for genre filter
+    //     $conditions[] = "g.genre_name IN (" . implode(",", $placeholders) . ")";
+    // }
 
         
         if (!empty($conditions)) {

@@ -85,3 +85,9 @@
   color: #ff8787;
   cursor: pointer;
 }
+
+.no-movies-found{
+  text-align:center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}

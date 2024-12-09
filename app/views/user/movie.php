@@ -18,8 +18,10 @@
                 <div class="logo">Z</div>
                 <ul class="nav-bar" id="nav-bar">
                 <li><a href="<?= BASE_URL ?>/User/home">Home</a></li>
-          <li><a href="<?= BASE_URL ?>/Movie">Movies</a></li>
-          <li><a href="<?= BASE_URL ?>/Series">Series</a></li>
+                <!-- <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=movie&sort=random">Movies</a></li>
+                <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=series&sort=random">Series</a></li> -->
+                <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?sort=random">Movies</a></li>
+                <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?sort=random">Series</a></li>
                 </ul>
             </div>
             <div class="right-nav">
@@ -76,22 +78,11 @@
 
             <div class="movie-grid" id="movie-grid">
 
-                <!-- <div class="card" style="background-image: url('<?=BASE_URL ?>/images/demo.jpeg');" id="card">
-                    <div class="card-label" id="card-label">
-                        <span>Ponyo</span>
-                        <div class="movie-tab">
-                            <span class="year">2018</span>
-                            <div class=vote-tab>
-                                <span class="vote-count">200</span>
-                                <span class="material-symbols-outlined">&#xe87d;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </main>
     <script src="<?= BASE_URL ?>/js/index.js"></script>
+    <script src="<?= BASE_URL ?>/js/movie.js"></script>
 </body>
 
 </html>
