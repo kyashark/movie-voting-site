@@ -4,7 +4,7 @@ require_once "../core/Controller.php";
 require_once "../core/Session.php";
 require_once "../middleware/Middleware.php";
 
-class SeriesController extends Controller{
+class seriesController extends Controller{
 
     private $movieModel;
 

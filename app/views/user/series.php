@@ -18,8 +18,8 @@
                 <div class="logo">Z</div>
                 <ul class="nav-bar" id="nav-bar">
                     <li><a href="<?= BASE_URL ?>/User/home">Home</a></li>
-                    <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=movie&sort=random">Movies</a></li>
-                    <li><a href="<?= BASE_URL ?>/Movie/filtereMovies?type=series&sort=random">Series</a></li>
+                    <li><a href="<?= BASE_URL ?>/movie/filtere?type=movie&sort=random">Movies</a></li>
+                    <li><a href="<?= BASE_URL ?>/movie/filtere?type=series&sort=random">Series</a></li>
                 </ul>
             </div>
             <div class="right-nav">
@@ -28,7 +28,7 @@
                         <?php echo $username ?>
                     </a>
                 </span>
-                <form method="POST" action="<?= BASE_URL ?>/Auth/logout">
+                <form method="POST" action="<?= BASE_URL ?>/auth/logout">
                     <button class="btn logout" type="submit">Logout</button>
                 </form>
 

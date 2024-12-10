@@ -19,8 +19,8 @@
         </ul>
       </div>
       <div class="right-nav">
-        <a href="<?= BASE_URL ?>/Auth/login"><button class="btn login">Login</button></a>
-        <a href="<?= BASE_URL ?>/Auth/register"><button class="btn register">Register</button></a>
+        <a href="<?= BASE_URL ?>/auth/login"><button class="btn login">Login</button></a>
+        <a href="<?= BASE_URL ?>/auth/register"><button class="btn register">Register</button></a>
         <div class="menu-item" id="menu-item">
           <span></span>
           <span></span>

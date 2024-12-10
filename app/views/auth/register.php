@@ -14,7 +14,7 @@
         <div class="auth-container">
             <div class="form-container">
                 <h5>Register</h2>
-                <form method="POST" action="<?= BASE_URL ?>/Auth/register">
+                <form method="POST" action="<?= BASE_URL ?>/auth/register">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" value="<?php echo $username ?? ''; ?>" required>
                     <span class="error-msg">
@@ -45,7 +45,7 @@
 
                     <button type="submit">Register</button>
                 </form>
-                <p>You already have an account ? <a href="<?= BASE_URL ?>/Auth/login">Login</a></p>
+                <p>You already have an account ? <a href="<?= BASE_URL ?>/auth/login">Login</a></p>
             </div>
         </div>
         <section>

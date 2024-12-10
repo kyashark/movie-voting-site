@@ -4,7 +4,7 @@ require_once "../core/Controller.php";
 require_once "../core/Session.php";
 require_once "../middleware/Middleware.php";
 
-class MovieController extends Controller{
+class movieController extends Controller{
 
     private $movieModel;
 
@@ -15,7 +15,7 @@ class MovieController extends Controller{
         $this->movieModel = $this->model('Movie');
     }
 
-    public function filtereMovies() {
+    public function filtere() {
         // .....
         $type = isset($_GET['type']) ? $_GET['type']:'';
 

@@ -7,15 +7,15 @@ class Middleware{
         if(Session::get('user_id')){
             $is_admin=(int) Session::get('is_admin');
             $redirectMap = [
-                1 => '/User/admin',
-                0 => '/User/home',
+                1 => '/user/admin',
+                0 => '/user/home',
             ];
 
             if(array_key_exists($is_admin,$redirectMap)){
                 header('Location: ' . BASE_URL . $redirectMap[$is_admin]);
             }else{
                 Session::destroy();
-                header('Location: ' . BASE_URL . '/User/index');
+                header('Location: ' . BASE_URL . '/user/index');
             }
             exit;
         }

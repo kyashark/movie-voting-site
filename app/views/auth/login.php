@@ -14,7 +14,7 @@
 
             <div class="form-container">
                 <h5>Login</h5>
-                <form method="POST" action="<?= BASE_URL ?>/Auth/login">
+                <form method="POST" action="<?= BASE_URL ?>/auth/login">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username">
                     <span class="error-msg">
@@ -33,7 +33,7 @@
 
                     <button type="submit">Login</button>
                 </form>
-                <p>You didn't have an account ? <a href="<?= BASE_URL ?>/Auth/register">Register</a></p>
+                <p>You didn't have an account ? <a href="<?= BASE_URL ?>/auth/register">Register</a></p>
             </div>
         </div>
         <section>

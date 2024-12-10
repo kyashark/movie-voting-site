@@ -4,7 +4,7 @@ require_once "../core/Controller.php";
 require_once "../core/Session.php";
 require_once "../middleware/Middleware.php";
 
-class UserController extends Controller{
+class userController extends Controller{
 
     public function index(){
         $this->view('index');

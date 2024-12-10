@@ -4,7 +4,7 @@ class App{
 
     public function __construct(){
         $url = $this->parseUrl();
-        $controllerName = ucfirst($url[0]). 'Controller';
+        $controllerName = $url[0]. 'Controller';
         $method = $url[1] ?? null;
 
         require_once "../app/controllers/$controllerName.php";
@@ -24,6 +24,6 @@ class App{
         if(isset($_GET['url'])){
             return explode('/',filter_var(rtrim($_GET['url'],'/'),FILTER_SANITIZE_URL));
         }
-        return ['User','index']; // Default route
+        return ['user','index']; // Default route
     }
 }

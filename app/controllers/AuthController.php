@@ -4,7 +4,7 @@ require_once "../core/Controller.php";
 require_once "../core/Session.php";
 require_once "../middleware/Middleware.php";
 
-class AuthController extends Controller{
+class authController extends Controller{
     private $userModel;
 
     public function __construct(){
@@ -110,7 +110,7 @@ class AuthController extends Controller{
 
             if(empty(array_filter($errors, fn($value) => !empty($value)))){
                 if($this->userModel->register($username,$email,$password)){
-                    header('Location: ' . BASE_URL . '/Auth/login');
+                    header('Location: ' . BASE_URL . '/auth/login');
                     exit;
                 }else{
                     $errors['registration'] = "Registration failed. Please try again.";
@@ -124,7 +124,7 @@ class AuthController extends Controller{
     // Logout user
     public function logout() {
         Session::destroy();
-        header('Location: ' . BASE_URL . '/User/index');
+        header('Location: ' . BASE_URL . '/user/index');
         exit;
     }
 }
