@@ -1,9 +1,11 @@
+
 .filter-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
   margin-top: 10px;
+  /* background-color: purple; */
 }
 
 .genre-container {
@@ -85,10 +87,13 @@
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 0;
-  color: #ff8787;
+  /* color: #ff8787; */
   cursor: pointer;
 }
 
+.heart{
+   color: #ff8787;
+}
 .no-movies-found{
   display: flex;
   margin-top: 50px;
@@ -97,3 +102,86 @@
 }
 
 
+/* Movie profile */
+
+
+.movie-profile{
+  display: none;
+  /* display: block; */
+  background-color: darkslategrey;
+  width: 70%;
+  max-width: 800px;
+  height: 480px;
+  border-radius: 10px;
+  position: fixed; /* Fixed to viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the popup */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  color: white;
+  z-index: 1000;
+  background-size: cover;
+}
+
+.movie-gardient{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.1) 50%),rgba(0, 0, 0, 0.2);
+  
+  width: 100%;
+  height: 100%;
+  padding:50px 32px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+.close{
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding:20px;
+  margin-top: -40px;
+  /* background-color: purple; */
+}
+
+.fa-xmark{
+  font-size: 25px;
+}
+
+.library-add{
+
+}
+
+.movie-details{
+/* background-color:cornflowerblue; */
+}
+
+.movie-details .movie-name{
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.movie-details .year-gener{
+  display: flex;
+  font-size: 1rem;
+  gap:20px;
+}
+
+.heart-library{
+  margin-top:10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.heart-library span{
+  font-size: 1.6rem;
+}
+
+.heart-library .movie-vote {
+  font-size: 1rem;
+}
+
+.movie-para{
+  font-size: 1.1rem;
+}
