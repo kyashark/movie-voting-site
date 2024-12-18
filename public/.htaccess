@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Ensure that .htaccess is enabled
-RewriteBase /online-voting-system/public/
+RewriteBase /movie-voting-site/public/
 
 # Accept loading of actual file and directories
 RewriteCond %{REQUEST_FILENAME} !-f

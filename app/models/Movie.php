@@ -9,10 +9,21 @@ class Movie{
 
 
     public function getMovies($type,$sort = 'random', $genres = []) {
-        $query = "SELECT m.movie_name, m.release_date, m.movie_votes, m.image 
-                FROM movies m 
+        $query = "SELECT m.id,
+                        m.movie_name,
+                        m.release_date,
+                        m.movie_votes,
+                        m.image,
+                        GROUP_CONCAT(g.genre_name SEPARATOR ' ') AS genre_names,
+                         CONCAT('images/', mi.image_1) AS image_1_url,
+                     CONCAT('images/', mi.image_2) AS image_2_url,
+                     CONCAT('images/', mi.image_3) AS image_3_url,
+                     CONCAT('images/', mi.image_4) AS image_4_url
+                FROM movies m
                 LEFT JOIN movie_genres mg ON m.id = mg.movie_id 
                 LEFT JOIN genres g ON mg.genre_id = g.genre_id
+                LEFT JOIN movie_images mi ON m.id = mi.movie_id
+
                 WHERE m.type =:type
                 GROUP BY m.id";
         

@@ -45,7 +45,8 @@
     <!-- bento grid -->
     <main>
         <div class="movie-container">
-
+<!-- 
+        <div class="movie-nav"> -->
             <div class="filter-container">
                 <div class="filter-tab">
                     <button class="filter btn" data-sort="top">Top Voted</button>
@@ -73,7 +74,7 @@
                 <button class="genre" data-genre="romance">Romance</button>
                 <button class="genre" data-genre="fantasy">Fantasy</button>
             </div>
-
+            <!-- </div> -->
             <div class="movie-grid" id="movie-grid">
 
             </div>
@@ -81,6 +82,7 @@
     </main>
     <script src="<?= BASE_URL ?>/js/index.js"></script>
     <script src="<?= BASE_URL ?>/js/movie.js"></script>
+    <script src="<?= BASE_URL ?>/js/movieProfile.js"></script>
 </body>
 
 </html>
